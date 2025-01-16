@@ -1,0 +1,28 @@
+
+
+
+[Evaluation Results]
+
+* completeness score per model (higher is better)
+bert_sum	50.7%
+bus	32.1%
+pgn	40.2%
+s2s	13.4%
+bart	40.2%
+
+* completeness model ranking (left is better)
+['bert_sum', 'pgn', 'bart', 'bus', 's2s']
+
+* conciseness score per model (higher is better)
+bert_sum	66.7%
+bus	50.0%
+pgn	66.7%
+s2s	50.0%
+bart	50.0%
+
+* conciseness model ranking (left is better)
+['bert_sum', 'pgn', 'bus', 's2s', 'bart']
+
+* success rate: 100.0%
+
+
