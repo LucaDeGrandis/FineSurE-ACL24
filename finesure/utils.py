@@ -226,15 +226,21 @@ def parsing_llm_keyfact_alighment_output(output):
 
 # Score funtions
 def compute_faithfulness_percentage_score(pred_faithfulness_labels):
+    if len(pred_faithfulness_labels) == 0:
+        return 0.0
     faithfulness = 1.0 - sum(pred_faithfulness_labels) / len(pred_faithfulness_labels)
     return faithfulness
 
 
 def compute_completeness_percentage_score(pred_alignment_labels):
+    if len(pred_alignment_labels) == 0:
+        return 0.0
     completeness = sum(pred_alignment_labels) / len(pred_alignment_labels)
     return completeness
 
 
 def compute_conciseness_percentage_score(pred_sentence_line_numbers, num_sentences):
+    if num_sentences == 0:
+        return 0.0
     conciseness = len(pred_sentence_line_numbers) / num_sentences
     return conciseness

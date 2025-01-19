@@ -180,7 +180,8 @@ async def generate_keyfacts(
                         "examples": examples,
                     })
                 }
-            ]
+            ],
+            temperature=0.0
         )
         token_dicts.append({
             'input': response.usage.prompt_tokens,
